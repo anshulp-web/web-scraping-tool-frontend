@@ -1,38 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .App {
-  text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.company-details img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* Loader css */
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bar {
+  width: 7px;
+  height: 18px;
+  margin: 0 9px;
+  border-radius: 10px;
+  animation: loading_5192 1s ease-in-out infinite;
+  background-color: #216666;
+}
+
+.bar:nth-child(1) {
+  animation-delay: 0.01s;
+}
+
+.bar:nth-child(2) {
+  animation-delay: 0.09s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.bar:nth-child(4) {
+  animation-delay: 0.29s;
+}
+
+@keyframes loading_5192 {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+
+  20% {
+    transform: scale(1, 2.5);
   }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Anchor */
+.link {
+  background-color: #007bff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+
+.link:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+
+.link:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.link:disabled {
+  cursor: auto;
+  color: grey;
 }
