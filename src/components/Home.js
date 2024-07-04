@@ -23,7 +23,7 @@ function Home() {
       setLoading(false);
       navigate('/companies');
     } catch (error) {
-      alert('Error scraping the website');
+      alert('Website data not scraped because this website is protected');
     }
   };
 
