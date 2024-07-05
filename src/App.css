@@ -146,3 +146,19 @@ th {
   cursor: auto;
   color: grey;
 }
+/* Media query */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 15px;
+  }
+  .link {
+    font-size: 12px;
+  }
+  .loader {
+    margin-top: 50px;
+  }
+  .MuiToolbar-root {
+    display: flex;
+    flex-direction: column;
+  }
+}
