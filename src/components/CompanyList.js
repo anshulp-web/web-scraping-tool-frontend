@@ -226,7 +226,7 @@ const CompanyList = ({ userId }) => {
           />
         </>
       ) : (
-        <div>
+        <div style={{ textAlign: 'center' }}>
           <span> -- Not available Make your list -- </span>
         </div>
       )}
