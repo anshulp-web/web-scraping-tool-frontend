@@ -24,6 +24,8 @@ function Home() {
       navigate('/companies');
     } catch (error) {
       alert('Website data not scraped because this website is protected');
+       setLoading(false);
+      navigate('/');
     }
   };
 
